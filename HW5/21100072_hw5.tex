@@ -1,0 +1,233 @@
+\documentclass{article}
+\usepackage{graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,hyperref}
+\usepackage[margin=1in]{geometry}
+\newtheorem{theorem}{Theorem}
+
+
+%----------------------- Student and Homework Information --------------------------
+
+%%% PLEASE FILL THIS OUT WITH YOUR INFORMATION
+\newcommand{\myname}{Anusheh Zohair Mustafeez}
+\newcommand{\myid}{21100072}
+\newcommand{\hwNo}{Homework 5}
+%%% END
+
+
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\sffamily\bfseries\large LUMS}
+\fancyhead[LO,RE]{\sffamily\bfseries\large CS-210 Discrete Mathematics}
+\fancyfoot[LO,RE]{\sffamily\bfseries\large \myname: \myid @lums.edu.pk}
+\fancyfoot[RO,LE]{\sffamily\bfseries\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%--------------------- This is the title of the document. DO NOT CHANGE IT ------------------------
+
+\title{CS-210 \hwNo}
+\author{\myname \qquad Student ID: \myid}
+
+%--------------------------------- AFTER Entering the Student and Homework Information, write your answers below  ----------------------------------
+
+\begin{document}
+\maketitle
+
+\section{Problem 4b}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092)\\\\
+Proving expression is a multiple of 3 for all 'n's\\
+P(n): ($22^{n}$-1)$\%$3=0\\\\
+Base Step: Proving first proposition is true:\\
+For n=0\\
+P(0):  ($22^{0}$ - 1)$\%$3\\
+=(1-1)$\%$3\\
+=0\\
+Hence proved P(0) is true.\\\\
+Inductive Hypothesis: Assuming any nth proposition is true:\\
+P(n): ($22^{n}$-1)$\%$3=0 is assumed to be true for any n\\\\
+Inductive Step: Proving  n+1 proposition is true given that P(n) is true:\\
+P(n+1): ($22^{n+1}$-1)$\%$3\\
+=($(22^{n}$)*(22-1)$\%$3\\
+=(($22^{n}$)*(21+1)-1)$\%$3\\
+=(($22^{n}$)*21 + $22^{n}$ -1)$\%$3\\ 
+Since both ($22^{n}$)*21 and $22^{n}$ -1 are both divisible by 3, P(n+1) is a sum of two terms divisible by three hence is divisible too.\\
+So P(n+1) is also proved to be true.\\
+Hence concluding P(n) is true for all n.\\
+
+\section{Problem 9}
+Collaborated with:  Hajira Zaman (21100057) and Safah Barak (21100092)\\\\
+Proving that for any real number x $\textgreater$ -1 and any positive integer n, $(1 + x)^{n}$ $\geq$ 1 + n*x \\\\
+Base Step: Proving first proposition is true:\\
+P(1): $(1 + x)^{0}$ $\geq$ 1 + (0)*x \\
+1  $\geq$ 1  \\
+Hence proved P(0) is proved to be true. \\\\
+Inductive Hypothesis: Assuming any nth proposition is true:\\
+P(n): $(1 + x)^{n}$ $\geq$ 1 + n*x is assumed to be true for any n.\\
+If we add x to both sides, we get $(1 + x)^{n}$ + x $\geq$ 1 + n*x +x\\
+So x $\geq$ $\frac{1 + n*x + x}{(1+x)^{n}}$ is assumed to be true for any n.\\\\
+Inductive Step: Proving  n+1 proposition is true given that P(n) ia true:\\
+P(n+1): $(1 + x)^{n+1}$ $\geq$ 1 + (n+1)*x\\
+($(1 + x)^{n}$)*(1+x) $\geq$ 1 + n*x +x\\  
+1+x $\geq$ $\frac{1 + n*x + x}{(1+x)^{n}}$ \\
+From our inductive hypothesis we know that x $\geq$ $\frac{1 + n*x + x}{(1+x)^{n}}$ is true and since x+1$\textgreater$ x we can conclude 1+x $\geq$ $\frac{1 + n*x + x}{(1+x)^{n}}$ is also true. \\
+So P(n+1) is also proved to be true.\\
+Hence concluding P(n) is true for all n.\\
+
+\section{Problem 10}
+Collaborated with:  Hajira Zaman (21100057) and Safah Barak (21100092)\\\\
+Any amount of postage greater or equal to 18 cents can be formed using just 3 cent and 10 cent stamps.\\
+Proving P(n) by strong induction such that P(n): 3*x + 10*y = n where x and y are non negative integers and n is any integer such that n$\geq$ 18: \\\\
+Base Step: Proving first proposition is true:\\
+P(18): 3*6 + 10*0 =18 \\
+Hence P(18) is proved to be true. \\\\
+Inductive Hypothesis: Assuming P(k) is true such that 19$\leq$k$\leq$n:\\
+P(k): 3*x + 10*y = k is assumed to be true for any k.\\\\
+Inductive Step: Proving  k+1 proposition is true given that P(k) is true such that 19$\leq$k$\leq$n:\\
+To ensure P(k+1) is true for all P(k) we can divide the problem into two cases:\\\\
+Case 1: Where there are at least three 3 cent stamps\\
+In this case if P(k) can be made into P(k+1) by simply replacing the three 3 cent stamps (n = 3*3 = 9 ) with one 10 cent stamp (n+1=10*1=10) and the proposition would still remain true. \\\\
+Case 2: Where there are at least two 10 cent stamps\\
+In this case if P(k) can be made into P(k+1) by simply replacing the two 10 cent stamps (n = 10*2 = 20 ) with seven 3 cent stamps (n+1=3*7=21) and the proposition would still remain true. \\\\
+This way each P(k+1) can be derived from P(k) using either case 1 or case 2 and P(k+1) is also proved to be true. \\
+Concluding P(n) is true for all n.\\
+
+\section{Problem 13}
+Collaborated with:  Hajira Zaman (21100057) and Safah Barak (21100092)\\\\
+Proving P(n): $2^{n}$ $\textless$ n! for all n $\in$ Z+, n $\textgreater$ 3. \\\\
+Base Step: Proving first proposition is true:\\
+P(4): $2^{4}$ $\textless$ 4!\\
+16 $\textless$ 4*3*2*1 \\
+16 $\textless$ 24\\
+Hence P(4) is proved to be true. \\\\
+Inductive Hypothesis: Assuming any nth proposition is true:\\
+P(n): $2^{n}$ $\textless$ n! is assumed to be true for any n.\\\\
+Inductive Step: Proving  n+1 proposition is true:\\
+P(n+1): $2^{n+1}$ $\textless$ (n+1)!\\
+2*$2^{n}$ $ \textless$ (n+1)*n!\\
+From the IH we know that $2^{n}$ $\textless$ n! is true and we can also deduce that 2$\textless$ (n+1) is also true as the least value (n+1) can take is 5. Hence 2*$2^{n}$ $ \textless$ (n+1)*n! is proved to be true.\\
+So P(n+1) is true. \\
+Concluding P(n) is true for all n.\\
+
+\section{Problem 17}
+Collaborated with:  Hajira Zaman (21100057) and Safah Barak (21100092)\\
+%Let a sequence an be recursively defined by a0 = 1, a1 = 2, and an = an−1an−2 for n ≥ 2.
+%(a) Find a2, a3, a4, a5 and a6.
+%(b) Prove that an = 2Fn , where F0, F1, F2, ... is the Fibonacci sequence.
+\begin{enumerate}
+\item %A
+$a_{2}=a_{0} *a_{1} = 1*2 = 2$\\
+$a_{3}=a_{1} *a_{2} = 2*2 = 4$\\
+$a_{4}=a_{2} *a_{3} = 2*4 = 8$\\
+$a_{5}=a_{3} *a_{4} = 4*8 = 32$\\
+$a_{6}=a_{4} *a_{5} = 8*32 =256$\\
+\item %B
+Proving that P(n): $a_{n}$ = $2^{F_{n}}$, where $F_{0}, F_{1}, F_{2},$ ... is the Fibonacci sequence\\
+Fibonacci sequence:$ F_{0}=0, F_{1}=1$ and $F_{n}= F_{n-1} + F_{n-2}$ for n$\textgreater$ 1\\\\
+Base Step: Proving first proposition is true:\\
+P(0): $a_{0}$ = $2^{F_{0}}$\\
+1=$2^{0}$\\
+1=1\\
+Hence P(0) is proved to be true. \\\\
+Inductive Hypothesis: Assuming P(k) is true such that 1$\leq$k$\leq$n\\
+P(k): $a_{k}$ = $2^{F_{k}}$ is assumed to be true for any k. \\\\
+Inductive Step: Proving  k+1 proposition is true:\\
+P(k+1): $a_{k+1}$ = $2^{F_{k+1}}$\\
+$a_{k}*(a_{k-1})$ = ($2^{F_{k}}$)*($2^{F_{k-1}}$)
+From the inductive hypothesis we've assumed that $a_{k}$ = $2^{F_{k}}$ and $a_{k-1}$ = $2^{F_{k-1}}$ so it can be concluded that $a_{k}*(a_{k-1})$ = ($2^{F_{k}}$)*($2^{F_{k-1}}$) is true.\\
+So P(n+1) is true. \\
+Concluding P(n) is true for all n.\\
+
+\end{enumerate}
+
+\section{Problem 19c}
+Collaborated with:  Hajira Zaman (21100057) and Safah Barak (21100092)\\\\
+Obtaining closed formula of $a_{n} = a_{n-1} + 2*n + 3$ with initial condition $a_{0}$ = 4 \\
+$a_{n} = a_{n-1} + 2*n + 3$ \\
+$a_{n} = (a_{n-2} +2*(n_1) +3) + 2*n + 3$\\
+$a_{n} = ((a_{n-3} + 2*(n-2) +3) +2*(n-1) +3) + 2*n + 3$\\
+After unraveliing the recurrence formula n number of times, we'll get: \\
+$a_{n} =a_{0} + 2*((n)+(n-1)+(n-2)....+(n-n)) +3n$\\
+$a_{n} =a_{0} + 2*(\frac{n*(n+1)}{2}) +3n$\\
+$a_{n} =a_{0} + n*(n+1) +3n$\\
+$a_{n} =a_{0} + n^{2} + n +3n$\\
+$a_{n} =a_{0} + n^{2} + 4n$\\
+Since $a_{0}$=4: \\
+$a_{n} =4 + n^{2} + 4n$\\
+$a_{n} =(n+2)^{2}$\\\\
+Verification using induction:\\
+Proving P(n): $a_{n} =(n+2)^{2}$\\\\
+Base Step: Proving first proposition is true:\\
+P(0): $a_{0} =(0+2)^{2}$
+$4 =(2)^{2}$ \\
+4=4\\
+Hence P(0) is proved to be true. \\\\
+Inductive Hypothesis: Assuming P(k) is true for all  such that  1$\leq$k$\leq$n:\\
+P(k): $a_{k} =(k+2)^{2}$ is assumed to be true for any k. \\\\
+Inductive Step: Proving  k+1 proposition is true:\\
+P(k+1): $a_{k+1} =k^{2} + 6*k +9$ \\
+$a_{k+1} = k^{2} + 4*k + 4 + 2*k +5 $\\
+$a_{k+1} = (k+2)^{2} + 2*k + 5$ where 2*k +5 is the difference between $a_{k+1}$ and $a_{k}$ for any value of k. \\
+Hence proved P(k+1) is true \\
+Concluding P(n) is true for all n.\\
+
+\section{Problem 21}
+Collaborated with: None\\
+\begin{enumerate}
+\item %A
+$a_{0}=0$\\
+$a_{1}=1$\\
+$a_{2}=2$\\
+$a_{n}$=n\\
+So total cars made in n months will be the sum of all cars made in that month and the previous months \\
+P(n): $T_{n}$= n + (n-1) + (n-2)+...+(n-n) where ((n-1)+(n-2)+....+(n-n)) is $T_{n-1}$ and ((n-2)+(n+3)....+(n-n)) is $T_{n-2}$ and so on.\\
+So recurrence relation of P(n) is $ T_{n}=n+T_{n-1}$\\
+\item %B
+Towards the end of the first year, n =12 so \\$T_{12}= n + T_{11}$ = 12 + 11 + 10 + 9 ......+1+ 0= 78\\
+\item %C
+Obtaining formula using recurrence relation:\\
+$ T_{n}=n+T_{n-1}$\\
+$ T_{n}=n+((n-1) + T_{n-2})$\\
+$ T_{n}=n+((n-1) + ((n-2) + T_{n-3}))$\\
+After unraveliing the recurrence formula n number of times, we'll get: \\
+$ T_{n}=n+(n-1)+(n-2)+...+(n-n)$\\
+$ T_{n}=\frac{n*(n+1)}{2}$\\
+$ T_{n}=\frac{n^{n}+n}{2}$\\
+\end{enumerate}
+
+\section{Problem 24}
+Collaborated with: None\\
+\begin{enumerate}
+\item %A
+The market shares of A and B entering into a new year are dependent on their market shares in the previous year. According to the data given: \\
+Market share retained by A when going into next year: 0.7 *$ a_{n-1}$ \\ 
+Market share retained by B when going into next year:  0.6 * $(1- a_{n-1})$ \\
+Market share gained by A from B:  0.4 * $(1-a_{n-1})$ \\ 
+Market share gained by B from A:  0.3 * $a_{n-1}$ \\
+Total Market share of A in year n: $a_{n}$ = 0.7 *$ a_{n-1}$ +  0.4 * $(1-a_{n-1})$ \\
+Total Market share of B in year B: $1- a_{n}$ = 0.6 *(1 - $ a_{n-1}$) +  0.3 * $(a_{n-1})$ \\
+We can use any of the above two closed formulas for our purpose. \\Using A's market share as reference: $a_{n}$ = 0.7 *$ a_{n-1}$ +  0.4 * $(1-a_{n-1})$ \\
+$a_{n}$ = 0.7 *$ a_{n-1}$ +  0.4 * $(1-a_{n-1})$ \\
+$a_{n}$ = 0.7 *$ a_{n-1}$ +  0.4 - 0.4*$a_{n-1}$ \\
+$a_{n}$ = 0.3*$ a_{n-1}$ +  0.4  \\
+\item %B
+Obtaining closed formula from recurrence relation: \\
+$a_{n}$ = 0.3*$ a_{n-1}$ +  0.4  \\
+$a_{n}$ = 0.3*(0.3*$ a_{n-2}$ + 0.4) +  0.4  \\
+$a_{n}$ = 0.3*(0.3*(0.3*$ a_{n-3}$ + 0.4) + 0.4) +  0.4  \\
+After unraveliing the recurrence formula n number of times, we'll get: \\
+$a_{n}$ = $0.3^{n}* a_{0}$ + 0.4*(($0.3^{n-1}$)+($0.3^{n-2}$)+($0.3^{n-3}$)+...+($0.3^{n-n}$))   \\
+$a_{n}$ = $0.3^{n}* a_{0}$ + 0.4*$\sum\limits_{i=0}^{n-1} 0.3^{i}$  where 0.4*$\sum\limits_{i=0}^{n-1} 0.3^{i}$ is the sum of a geometric progression so:\\
+$a_{n}$ = $0.3^{n}* a_{0}$ + 0.4*$\frac{0.3^{n}-1}{0.3-1}$\\
+$a_{n}$ = $0.3^{n}* a_{0}$ + $\frac{0.4*0.3^{n}-0.4}{-0.7}$\\
+$a_{n}$ = $0.3^{n}* a_{0}$ + $\frac{0.4*0.3^{n}-0.4}{-0.7}$\\
+$a_{n}$ = $0.3^{n}* a_{0}$ - $\frac{4}{7}$*$(0.3^{n})$ + $\frac{4}{7}$\\
+$a_{n}$ = $0.3^{n}* (a_{0}$ - $\frac{4}{7}$) + $\frac{4}{7}$\\
+\item %C
+$a_{n}$ = $0.3^{n}* (a_{0}$ - $\frac{4}{7}$) + $\frac{4}{7}$\\
+When n $\rightarrow \infty$, $0.3^{n} \rightarrow$ 0 \\
+So $a_{n} \rightarrow \frac{4}{7}$ \\
+So in the long run, A's market share with become more or less constant at $\frac{4}{7}$ and become independent of its initial market share $a_{0}$.$a_{n}$ = $0.3^{n}* (a_{0}$ - $\frac{4}{7}$) + $\frac{4}{7}$\\$a_{n}$ = $0.3^{n}* (a_{0}$ - $\frac{4}{7}$) + $\frac{4}{7}$\\
+\end{enumerate}
+
+\end{document}

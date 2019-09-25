@@ -1,0 +1,139 @@
+\documentclass{article}
+\usepackage{graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,hyperref}
+\usepackage[margin=1in]{geometry}
+\newtheorem{theorem}{Theorem}
+
+
+%----------------------- Student and Homework Information --------------------------
+
+%%% PLEASE FILL THIS OUT WITH YOUR INFORMATION
+\newcommand{\myname}{Anusheh Zohair Mustafeez}
+\newcommand{\myid}{21100072}
+\newcommand{\hwNo}{Homework 4}
+%%% END
+
+
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\sffamily\bfseries\large LUMS}
+\fancyhead[LO,RE]{\sffamily\bfseries\large CS-210 Discrete Mathematics}
+\fancyfoot[LO,RE]{\sffamily\bfseries\large \myname: \myid @lums.edu.pk}
+\fancyfoot[RO,LE]{\sffamily\bfseries\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%--------------------- This is the title of the document. DO NOT CHANGE IT ------------------------
+
+\title{CS-210 \hwNo}
+\author{\myname \qquad Student ID: \myid}
+
+%--------------------------------- AFTER Entering the Student and Homework Information, write your answers below  ----------------------------------
+
+\begin{document}
+\maketitle
+
+\section{Problem 2}
+Collaborated with: Safah Barak (21100092)\\
+\begin{enumerate}
+\item %A
+$\sum_{j = 0}^{8} (2^{j +1} - 2^j)$ \\ = 1+2+4+8+16+32+64+128+256 \\ =511 \\
+
+\item %B
+$\sum\limits_{i=1}^5 i^2 +\sum\limits_{i=1}^5 7$  \\ = $\frac{(5(5+1)(2(5)+1))}{6}$ + 5*7 \\ =90
+
+\item %C
+$\sum\limits_{i=1}^4 (i^2+i)$ \\ =$\sum\limits_{i=1}^4 (i^2)$ + $\sum\limits_{i=1}^4 (i)$ \\ $\frac{4(4+1)(2(4)+1)}{6} + \frac{4(4+1)}{2}$  \\ =40
+
+\item %D
+$\sum\limits_{k=1}^4 k^2 +\sum\limits_{k=1}^4 k$ \\ =$\sum\limits_{k=1}^4 (k^2)$ + $\sum\limits_{k=1}^4 (k)$ \\ $\frac{4(4+1)(2(4)+1)}{6} + \frac{4(4+1)}{2}$  \\ =40
+
+\item %E
+$\sum\limits_{i=0}^4 (3i^2+2i)$ \\= 3$\sum\limits_{i=0}^4 (i^2)$ + 2$\sum\limits_{i=0}^4 (i)$ \\= 3$\frac{4(4+1)(2(4)+1)}{6} + 2\frac{4(4+1)}{2} $  \\ =110
+
+\item %F
+$3\sum\limits_{k=0}^4 k^2 +2\sum\limits_{k=0}^4 k$ \\= 3$\sum\limits_{k=0}^4 (k^2)$ + 2$\sum\limits_{k=0}^4 (k)$ \\= 3$\frac{4(4+1)(2(4)+1)}{6} + 2\frac{4(4+1)}{2} $  \\ =110
+
+\item %G
+$\sum\limits_{k= 111}^{3000} k$ \\= $\frac {3000(3000+10}{2}  - \frac{110(110+1)}{2}$ \\ =4495395
+
+\item %H
+ $\sum\limits_{k=-n}^n k$ \\ (-n)+(-n + 1) +(-n+2)........+(n-2)+( n-1) +(n) \\=0
+\end{enumerate}
+
+\section{Problem 4}
+Collaborated with: Safah Barak (21100092)\\
+\begin{enumerate}
+\item %A
+$\sum\limits_{i=1}^n (i^2 +2)$ \\ Next three terms: 123, 146, 171
+
+\item %B
+$\sum\limits_{i=0}^n (7+ 4i)$ \\ Next three terms: 47,51,55
+
+\item %C
+Rule: This is just a sequence of natural numbers written in base 2 \\ Next three terms: 1100,1101,1110
+
+\item %D
+$\sum\limits_{i=0}^n (3^n -1)$ \\Next three terms: 59048, 177146, 531440
+
+
+\item %E
+This is a sequence of numbers starting with 1 progressively being multiplied with positive odd numbers starting from 3 onwards so 1*3, 3*5, 15*7 and so on. \\Next three terms: 
+
+\item %F
+This sequence has a pattern such that for each odd term, there are 1's repeated by that odd term and there are 0's repeated for each even term times that even term so it's one 1, two 0's, three 1;s and so on.\\Next three terms: 000000,1111111,00000000
+
+\item %G
+Starting with two, each term of the sequence is a square of its previous term\\Next three terms: $1.844674407*10^{19}, 3.402823669*10^{38}, 1.157920892*10^{77}$ 
+
+\end{enumerate}
+
+\section{Problem 5}
+Collaborated with: Safah Barak (21100092)\\
+Since sum of a geometric progression =  $\frac{a(1-r^n)}{1-r}$ where a is the first term, r is the common ratio and n is the number of terms. So \\ 
+\begin{enumerate}
+\item %A
+ $\sum_{k=0}^{9} 2^k$ \\= $\frac{1(1-2^{10})}{1-2}$ =1023
+
+\item %B
+ $\sum_{k=0}^{15} (3*(-2)^k)$ \\\\ = 3$\sum_{k=0}^{15} (-2)^k$ \\= 3$\frac{1(1-2^{16})}{1-2}$\\ =3*-21845\\=-65535
+
+\item %C
+$\sum_{j=0}^{12} (3*2^j)$ \\\\ = 3$\sum_{j=0}^{12} (2^j)$ \\=3$\frac {1(1-2^{13})}{1-2}$ \\ = 3*8191 \\=24573 
+
+\end{enumerate}
+
+\section{Problem 6}
+Collaborated with: Safah Barak (21100092)\\
+From the sequence it can be inferred that any n would either be equal to or lesser than a summation of a such that n$\leq \frac{a*(a-1)}{2}$\\ 2n $\leq a^{2}$ - a \\ Completing the square: $(\frac{1}{2})^{2}$ + 2n $\leq a^{2}$ - a + $(\frac{1}{2})^{2}$ \\  $(\frac{1}{4})$ + 2n $\leq (a - \frac{1}{2})^{2}$ \\$\sqrt[2]{(\frac{1}{4}) + 2n} $$\leq \sqrt[2]{(a - \frac{1}{2})^{2}}$ \\ $ \sqrt[2]{(\frac{1}{4}) + 2n}$ $\leq(a - \frac{1}{2})$ \\ $ \sqrt[2]{(\frac{1}{4}) + 2n}+ \frac{1}{2} $ $\leq a $ \\ So a= $\lfloor \sqrt[2]{(\frac{1}{4}) + 2n}+ \frac{1}{2} \rfloor$ 
+
+\section{Problem 7}
+Collaborated with: Safah Barak (21100092)\\
+Since sum of an infinite geometric progression = $\frac {a}{1-r}$ where r is the common ratio and a in the initial term\\ In this case, a=r so \\
+ $\sum\limits_{i=0}^{\infty} ir^i$ = $\frac{r}{(1-r)^{2}}$
+
+\section{Problem 9}
+Collaborated with: Safah Barak (21100092)\\
+If n is an integer, $n^{2} \geq$ n \\Proving using Case Analysis: \\ Case 1: n=0 : \\ $n^{2}$=0 = n \\ Case 2: n $<$ 0 \\ (-n)(-n) = $n^{2} > $ 0 so $n^{2} >$ n\\ Case 3: n$>$ 0\\ (n)(n)=$n^{2} >$0 and $n^{2}$ has a higher magnitude and same sign as n so $n^{2} >$n
+
+
+\section{Problem 14}
+Collaborated with:  Safah Barak (21100092)\\
+If 2x is irrational then x is irrational\\ Proving by contrapositive: \\If x is rational then 2x is rational \\ So x= $\frac{p}{q}$ such that p and q are integers and q is not equal to zero \\  Hence 2x is also rational as 2 is rational and x is rational and the product of two rational numbers is rational.  
+
+\section{Problem 15}
+Collaborated with: Safah Barak (21100092) \\
+If $n^{2}$ is an even number then so is n. \\ Proving by contrapositive: \\ If n is odd, $n^{2}$ is odd \\ n = 2x + 1 (odd)\\ So $n^{2} =(2x+1)^{2}$ \\ =(2x+1)*(2x+1) \\= $(2x)^{2} + 2(2x)(1) +(1)^{2}  \\= 2(2x^{2} +2x) +1$ (odd)
+
+
+\section{Problem 18}
+Collaborated with:  Safah Barak (21100092) \\
+Disproving the statement: \\ If x= 7.6 and y=0.2 then \\ $\lceil x-y\rceil$ = 8 \\ While $\lceil x\rceil$ - $\lceil y\rceil$ = 8 -1 =9 \\ Hence disproved as 8=9 (Contradiction)
+
+\section{Problem 19}
+Collaborated with:  Safah Barak (21100092)\\
+There are no positive integer solutions to $ x^{2} + y^{2} = 1$ \\ Proving by contradiction: \\ Suppose there exists a positive integer solution to $ x^{2} + y^{2} = 1$  so $x>0$ and $y>0$\\ $ x^{2} = 1-  y^{2}$ For any integer value of $y >0$, $x^{2}<$0 so x is an imaginary number (hence contradiction)
+
+
+\end{document}

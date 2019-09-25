@@ -1,0 +1,156 @@
+\documentclass{article}
+\usepackage{graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,hyperref}
+\usepackage[margin=1in]{geometry}
+\newtheorem{theorem}{Theorem}
+
+
+%----------------------- Student and Homework Information --------------------------
+
+%%% PLEASE FILL THIS OUT WITH YOUR INFORMATION
+\newcommand{\myname}{Anusheh Zohair Mustafeez}
+\newcommand{\myid}{21100072}
+\newcommand{\hwNo}{Homework 7}
+%%% END
+
+
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\sffamily\bfseries\large LUMS}
+\fancyhead[LO,RE]{\sffamily\bfseries\large CS-210 Discrete Mathematics}
+\fancyfoot[LO,RE]{\sffamily\bfseries\large \myname: \myid @lums.edu.pk}
+\fancyfoot[RO,LE]{\sffamily\bfseries\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%--------------------- This is the title of the document. DO NOT CHANGE IT ------------------------
+
+\title{CS-210 \hwNo}
+\author{\myname \qquad Student ID: \myid}
+
+%--------------------------------- AFTER Entering the Student and Homework Information, write your answers below  ----------------------------------
+
+\begin{document}
+\maketitle
+% How many functions are there from the set {a1, a2, . . . , an}, where n is a positive integer, to the set
+%{0, 1}?
+
+\section{Problem 1}
+Collaborated with: Safah Barak (21100092) \\
+If we divide our task into two successive tasks we can make use of the product rule to solve this question. The first task will be to find the number of possible catesian products for any one value of domain. Since the cardaniality of our range is 2, we will have 2 cartesian products for our x. Next we can find the possible outcomes of the remaining (n-1) domain values. Since our first value of x is mapped onto either 0 or 1 from the range values, the remaining n-1 values can only have a single cartesian product value. Hence our total outcomes will be:\\
+(2*1)*(1*(n-1))=2(n-1)
+
+\section{Problem 5}
+Collaborated with: None.\\
+Using the Inclusion-Exclusion Principle:\\
+Total number of desired elements: $\mid$A$\mid$ + $\mid$B$\mid$ + $\mid$C$\mid$ + $\mid$D$\mid$ -$\mid$A $\cap$ B$\mid$-$\mid$A $\cap$ C$\mid$-$\mid$A $\cap$ D$\mid$-$\mid$B $\cap$ C$\mid$-$\mid$B $\cap$ D$\mid$-$\mid$C $\cap$ D$\mid$+$\mid$A $\cap$ B $\cap$ C$\mid$+$\mid$A $\cap$ B $\cap$ D$\mid$+$\mid$D $\cap$ B $\cap$ C$\mid$+$\mid$A $\cap$ D $\cap$ C$\mid$\\
+=50+60+70+80-5-5-5-5-5-5+1+1+1+1\\
+=254\\
+
+
+\section{Problem 6}
+Collaborated with: Hajira Zaman (21100057)\\
+Fixing a string of 5 ones:\\
+Outcomes with string starting from first position: $2^{5}$\\
+Outcomes with string starting from second position with a zero fixed at its start: $2^{4}$\\ 
+Outcomes with string starting from third position with a zero fixed at its start: $2^{4}$ \\
+Outcomes with string starting from forth position with a zero fixed at its start: $2^{4}$ \\
+Outcomes with string starting from fifth position with a zero fixed at its start: $2^{4}$ \\
+Outcomes with string starting from sixth position with a zero fixed at its start: $2^{4}$ \\
+
+So sum of possible outcomes with 5 ones: ($2^{5}$  + 5($2^{4}$ ))\\
+Sum of possibleoutcomes with 5 zeros will be the same i.e = ($2^{5}$  + 5($2^{4}$ ))\\
+So total outcomes= 2*(($2^{5}$  + 5($2^{4}$ ))\\
+But it is important to note that we have two repetitions in these outcomes in the cases where our strings are 0000011111 and 1111100000. So we will subtract 2 from our total to remove repetition:\\
+So total = 2*(($2^{5}$  + 5($2^{4}$ )) - 2 \\
+=2*(32+5(16))-2\\
+=2(112)-2\\
+=224-2\\
+=222
+
+
+\section{Problem 10}
+Collaborated with: None.\\
+Total strings: 26!
+Strings that contain "rat": 24!
+Strings that contain "fish": 23!
+Strings that contain "bird": 23!
+Strings that contain "rat": 21!
+Using the Inclusion-Exclusion Principle:\\
+Desired outcomes= 26! - 24! - 23! - 23! + 21! \\
+
+\section{Problem 12}
+Collaborated with: None.\\
+\begin{enumerate}
+\item %A
+For a 5 digit palindrome we will only consider the first three digits as the forth and fifth digits are determined by the first and second digits' selections. We well use product rule://
+Since the first and last digits can't be 0 our outcomes will be from 1-9, so total number of outcomes for first digit= 9\\
+Number of outcomes for second digit (0-9) =10\\
+Number of outcomes for third digit (0-9) =10\\
+Total outcomes=9*10*10\\
+=900\\
+\item %B
+If a number is odd or even is determined by its last digit and the last digit can only lie from 1-9 so:\\
+Even outcomes= 4*10*10\\
+=400\\
+Odd outcomes=5*10*10\\
+=500\\
+
+\end{enumerate}
+
+\section{Problem 13}
+Collaborated with: Hajira Zaman (21100057).\\
+If the three eldest children are girls, then we have 3 girls grouped together at the start and 3 boys grouped at the end after the girls. We can divide the tasks and solve this by product rule. \\
+The ways the three girls can arrange at the start: 3!\\
+The ways the three boys can arrange at the end: 3!\\
+Product rule: \\
+Total number of ways the 3 eldest children are the 3 girls: 3!*3!\\
+=36 \\
+
+\section{Problem 14}
+Collaborated with: Safah Barak (21100092)\\
+\begin{enumerate}
+\item %A
+Uisng the bars and stars relationship we can solve this problem by using ${n-k+1\choose k-1}$ so each of the k kids will get ${n-k+1\choose k-1}$ pennies from the total n pennies.\\
+\item %B
+Since now we have no constraints we can simply use combination to solve this problem i.e ${n\choose k}$ which is $frac{n!}{k!(n-k)!}$ \\
+
+
+\end{enumerate}
+
+\section{Problem 15}
+Collaborated with: None.\\
+We can prove this part by using proof by contradiction. Suppose what the statement says is false. So we are now assuming that each nth pigeonhole contains at most Pn -1 pigeons. According to this when we add our total pigeons we get at most (P1-1)+(P2-1)+...+(Pn-1) = P1+P2+...+Pn-n which contradicts the statement provided to us in the start that there were P1 + P2 +... + Pn - n + 1 pigeons. Hence the statement provided is true.
+
+\section{Problem 17}
+Collaborated with: None.\\
+\begin{enumerate}
+\item %A
+We can solve this problem by making pairs of integers that add upto 9 as pigeonholes. So our possible pigeonholes from 1-8 will be$\{1,8\},\{2,7\},\{3,6\}$ and$\{4,5\}$. Now if we choose any 5 numbers from 1-8, we can consider these to be our pigeons. Now since the number of pigeons is greater than the number of pigeonholes (i.e. 4), the pigeonhole principle confirms that there will be at least one pigeonhole that will have more than one pigeon which in our case means there must be a pair of integers with a sum equal to 9 as any two integers in a single group will form a sum of 9. 
+\item %B
+No as we can easily provide a counterargument e.g. if we choose 1, 2,3 and 4, there isn't a single pair from our selected integers that add up to 9. Hence the statement in the first part does not remain true when 4 integers are selected instead of five.
+\end{enumerate}
+
+\section{Problem 18}
+Collaborated with: None.\\
+Suppose we have a total of 2n footballers, n of which are from Pakistan and the other n are from India. We have to select a team of n players and select one of the teams players that is Pakistani as the captain of the team. Now we can either select the captain first and team later or the team first and captain from it later. Using this we can derive our formula.
+
+
+\section{Problem 22}
+Collaborated with: Safah Barak (21100092).\\
+The binomial theorem: (x+y)$^{n}$=$\sum_{i=0}^{n} x^{n-i} y^{i} {n\choose i}$ which the sum of all terms \\
+So the term we want will be : $((3x)^{n-i}) (2y)^{i} {17\choose 9}$\\
+So coefficient is : (3$^{8} $)*(2$^9$)*(24310)\\
+=(6561)*(512)*(24310)\\
+=81662929920\\
+
+\section{Problem 24}
+Collaborated with: Safah Barak (21100092) and Hajira Zaman(21100057)\\
+The binomial theorem: (x+y)$^{n}$=$\sum_{k=0}^{n} x^{n-k} y^{k} {n\choose k}$ \\
+So if we put x=1 and y =2 in the theorem:\\
+(1+2)$^{n}$=$\sum_{k=0}^{n} 1^{n-k} 2^{k} {n\choose k}$\\
+So:\\
+(3)$^{n}$=$\sum_{k=0}^{n}2^{k} {n\choose k}$ (proved)\\
+
+\end{document}

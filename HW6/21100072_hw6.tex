@@ -1,0 +1,113 @@
+\documentclass{article}
+
+\usepackage{graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,hyperref}
+\usepackage{tikz}
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{theorem}{Theorem}
+
+
+%----------------------- Student and Homework Information --------------------------
+
+%%% PLEASE FILL THIS OUT WITH YOUR INFORMATION
+\newcommand{\myname}{Anusheh Zohair Mustafeez}
+\newcommand{\myid}{21100072}
+\newcommand{\hwNo}{Homework 6}
+%%% END
+
+
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\sffamily\bfseries\large LUMS}
+\fancyhead[LO,RE]{\sffamily\bfseries\large CS-210 Discrete Mathematics}
+\fancyfoot[LO,RE]{\sffamily\bfseries\large \myname: \myid @lums.edu.pk}
+\fancyfoot[RO,LE]{\sffamily\bfseries\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%--------------------- This is the title of the document. DO NOT CHANGE IT ------------------------
+
+\title{CS-210 \hwNo}
+\author{\myname \qquad Student ID: \myid}
+
+%--------------------------------- AFTER Entering the Student and Homework Information, write your answers below  ----------------------------------
+
+\begin{document}
+\maketitle
+
+\section{Problem 2}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092)\\\\
+For R to be an equivalence relation, it must be reflexive, symmetric and transitive. \\Proving reflexivity: \\Since c+d=d+c is a true statement ((c,d),(c,d)) $\in$ R hence R is reflexive. \\Proving symmetry: \\Since a+d=b+c and c+b=a+d yield the same result and are both true, both ((a,b),(c,d)) $\in$ R and ((c,d),(a,b)) $\in$ R hence R is symmetric. \\Proving transitivity: \\Since a+d=b+c and c+f=d+e are both true expressions on positive integers, the sum of the two expressions will yield a+d+c+f=b+c+d+e which will be simplified to a+f=b+e which is also true. Thus ((a,b),(c,d)) $\in$ R, ((c,d),(e,f)) $\in$ R and ((a,b),(e,f)) $\in$ R hence R in transitive.\\Hence we can conclude that R is indeed an equivalence relation.
+\section{Problem 3}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092)\\\\
+The error in the proof is found in the last line which reads, "Since this is true for any element a $\in$ A, we get that (a, a) $\in$ R for every element a $\in$ A. Hence R is reflexive." The problem is that proof given isn't necessarily true for all elements of A since there is no proof that the proof will be true for all elements of A with the same b as in the proof. So there may exist a c $\in$ A such that it (c,b) $\notin$ R and this proves the statement wrong. Another issue is that the proof leaves room for b $\notin$ A in which case there are loopholes in the statements that claim for (a,b) $\in$ R, R is symmetric and transitive. Hence the proof is flawed.
+
+\section{Problem 7}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092)
+\begin{table}[h]
+\begin{tabular}{lclclclclc|}
+\hline
+ &Supplier & Part Number & Project & Quantity & Color Code & \\
+ \hline
+ &23 & 1092  & 1   & \hspace{3mm}  2    & 2 &  \\ 
+ \hline
+ &23 & 1101  & 3  &\hspace{3mm} 1      & 1 & \\ 
+ \hline
+ &23 & 9048  & 4  &\hspace{3mm}  12     & 2 & \\ 
+ \hline
+ &31 & 4975  & 3  &\hspace{3mm}   6    &2  & \\ 
+ \hline
+ &31 & 3477  & 2  &\hspace{3mm}  25     & 2 & \\ 
+ \hline
+ &32 & 6984  & 4  &\hspace{3mm}   10    & 1 & \\ 
+ \hline
+ &32& 9191  &2   &\hspace{3mm} 80      & 4 &  \\ 
+ \hline
+ &33& 1001  & 1  &\hspace{3mm}  14     &8 &
+\end{tabular}
+\end{table}
+\section{Problem 9}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092)\\\\
+To be a partial ordering, a relation must be reflexive, antisymmetric and transitive.\\
+\begin{enumerate}
+\item %A
+This relation is not a partial ordering as despite being transitive and antisymmetric, (1,1) is not part of the relation hence the relation is not reflexive. 
+\item %B
+This relation is a partial ordering as it is reflexive transitive and antisymmetric.
+\item %C
+This relation is not a partial ordering as despite being reflexive and antisymmetric, the relation has (3,1) and (1,2) but not (3,2) hence the relation is not transitive. 
+\item %D
+This relation is not a partial ordering as despite being reflexive and antisymmetric, the relation has (1,2) and (2,0) but not (1,0) is hence the relation is not transitive. 
+\item %E
+This relation is not a partial ordering as despite being reflexive, the relation has (2,0) and (0,1) but not (2,1) hence the relation is not transitive. Furthermore, the relation is also not antisymmetric as both (0,1) and (1,0) are part of the relation.
+\end{enumerate}
+
+\section{Problem 12}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092)\\
+\begin{tikzpicture}
+  \node (a) at (3,5.75) {$48$};
+  \node (b) at (5,5) {$36$};
+  \node (c) at (3,4.5) {$24$};
+  \node (d) at (3,3.25) {$12$};
+  \node (e) at (3,2) {$6$};
+  \node (h) at (1,0) {$2$};
+  \node (g) at (3,0.75) {$3$};
+  \node (i) at (2,-1) {$1$};
+  \draw (i) -- (h) -- (i) -- (g) -- (g) -- (e) -- (h) -- (e) --(d)--(e)--(d)--(d)--(b)--(d)--(c)--(c)--(a);
+\end{tikzpicture}
+\section{Problem 14}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092)
+\begin{enumerate}
+\item %A
+\{(a,a),(b,b),(c,c),(d,d),(e,e),(a,c),(a,d),(a,b),(a,e),(c,d),(b,d),(b.e)\}
+
+\item %B
+\{(a,b,e),(a,c,d),(a,b,d)\}
+
+\item %C
+
+\{(b,c),(c,e),(e,d)\}
+\end{enumerate}
+\end{document}
