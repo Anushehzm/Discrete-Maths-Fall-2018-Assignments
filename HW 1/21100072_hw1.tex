@@ -1,0 +1,235 @@
+\documentclass{article}
+\usepackage{graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,hyperref}
+\usepackage[margin=1in]{geometry}
+\newtheorem{theorem}{Theorem}
+
+
+%----------------------- Student and Homework Information --------------------------
+
+%%% PLEASE FILL THIS OUT WITH YOUR INFORMATION
+\newcommand{\myname}{Anusheh Zohair Mustafeez}
+\newcommand{\myid}{21100072}
+\newcommand{\hwNo}{Homework 1}
+%%% END
+
+
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\sffamily\bfseries\large LUMS}
+\fancyhead[LO,RE]{\sffamily\bfseries\large CS-210 Discrete Mathematics}
+\fancyfoot[LO,RE]{\sffamily\bfseries\large \myname: \myid @lums.edu.pk}
+\fancyfoot[RO,LE]{\sffamily\bfseries\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%--------------------- This is the title of the document. DO NOT CHANGE IT ------------------------
+
+\title{CS-210 \hwNo}
+\author{\myname \qquad Student ID: \myid}
+
+%--------------------------------- AFTER Entering the Student and Homework Information, write your answers below  ----------------------------------
+
+\begin{document}
+\maketitle
+
+\section{Question 1}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092)
+\begin{enumerate}
+\item %A
+$\exists$xp(x)
+
+\item %B
+$\exists$x(s(x)$\wedge$p(x))
+
+\item %C
+$\forall$x(p(x)$\rightarrow$$\lnot$r(x))
+\item %D
+$\forall$x(p(x)$\rightarrow$$\lnot$r(x))
+\item %E
+$\exists x(p(x)\wedge r(x))$
+\item %F
+$\forall x((p(x)\wedge t(x))\rightarrow q(x))$
+\end{enumerate}
+
+\section{Question 2}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092)
+\begin{enumerate}
+\item %A
+Each polygon x can either be a quadrilateral or a triangle but not both at the same time. \\
+Truth Value: True
+\item %B
+If a polygon x is an isosceles triangle, then it is an equilateral triangle. \\
+Truth value: False 
+
+\item %C
+There exists a polygon x which is a triangle and has an interior angle that exceeds 180. \\
+Truth value: False
+\item %D
+A polygon x is an equilateral triangle if and only if it is a triangle whose interior angles are all equal. \\
+Truth value: True
+\item %E
+There exists a polygon x that is a quadrilateral but not a rectangle. \\
+Truth value: True
+\item %F
+There exists a polygon x that is a rectangle but not a square. \\
+Truth value: True
+\item %G
+If all sides of a polygon x are equal, then it is an equilateral triangle. \\
+Truth value: False
+\item %H
+If a polygon x is a triangle, then it does not have an interior angle that exceeds 180.\\
+Truth vale: True
+\item %I
+A polygon x is a square if and only if all interior angles of the polygon are equal and all sides of the polygon are equal. \\
+Truth value: False
+\item %J
+If a polygon x is a triangle, then all the interior angles of the polygon are equal if and only if all its sides are equal. \\
+Truth value: True
+\end{enumerate}
+
+\section{Question 3}
+Collaborated with: Hajira Zaman (21100057)
+\begin{enumerate}
+\item %A
+False
+\item %B
+True
+\item %C
+True
+\item %D
+False
+\end{enumerate}
+
+\section{Question 4}
+Collaborated with: Safah Barak (21100092)
+\begin{enumerate}
+\item %Original
+Original: If P is a square, then P is a rectangle.						\hspace{30mm}	Truth Value: True
+\item %Contrapositive
+Contrapositive: If P is not a rectangle, then P is not a square.				\hspace{8mm}	Truth Value: True
+\item %Converse
+Converse: If P is a rectangle, then P is a square.						\hspace{29mm}	Truth Value: False
+\item %Inverse
+Inverse: If P is not a square, then P is not a rectangle.					\hspace{20mm}	Truth Value: False
+
+\end{enumerate}
+
+
+\section{Question 7}
+Collaborated with: None
+\begin{table}[h]
+\begin{tabular}{lclclclclclclc|c|}
+\hline
+ &P & Q & R & Q $\vee$  R & P$\rightarrow$(Q$\vee$R ) &$\lnot$R  &  P$\rightarrow$Q& $\lnot$R$\rightarrow$(P$\rightarrow$Q) \\
+ \hline
+ &T & T  & T   & \hspace{3mm}  T    & T &  \hspace{2mm}F& T &\hspace{9mm }T & \\ 
+ \hline
+ &T & T  & F  &\hspace{3mm} T      & T & \hspace{2mm}T & T &\hspace{8mm} T &\\ 
+ \hline
+ &T & F  & T  &\hspace{3mm}  T     & T & \hspace{2mm}F & F &\hspace{8mm} T &\\ 
+ \hline
+ &T & F  & F  &\hspace{3mm}   F    &F  &\hspace{2mm}T  &F  &\hspace{8mm} F& \\ 
+ \hline
+ &F & T  & T  &\hspace{3mm}  T     & T & \hspace{2mm}F & T &\hspace{8mm} T  &\\ 
+ \hline
+ &F & T  & F  &\hspace{3mm}   T    & T & \hspace{2mm}T& T & \hspace{8mm} T &\\ 
+ \hline
+  &F& F  &T   &\hspace{3mm} T      & T & \hspace{2mm}F &T  &\hspace{8mm} T & \\ 
+ \hline
+  &F& F  & F  &\hspace{3mm}  F     &T &\hspace{2mm}T &T  &\hspace{8mm} T&
+\end{tabular}
+\end{table}
+
+
+
+\section{Question 8}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092)
+\begin{enumerate}
+\item %A
+$(P \rightarrow R) \vee (Q \rightarrow R) \equiv (P\wedge Q) \rightarrow R$ \\
+LHS: \\
+$(\lnot P \vee R) \vee (\lnot Q \vee R)$ \hspace{10mm} (Implication Law) \\
+$(\lnot P \vee R) \vee (R \vee \lnot Q )$ \hspace{10mm} (Commutative Law)\\
+$\lnot P \vee ( R \vee R) \vee \lnot Q$ \hspace{13mm} (Associative Law)\\
+$\lnot P \vee  R  \vee \lnot Q$ \hspace{22mm} (Idempotent Law)\\
+$\lnot P  \vee \lnot Q \vee R$ \hspace{22mm} (Commutative Law)\\
+$\lnot (P \wedge  Q) \vee R$ \hspace{22mm} (De Morgan's Law)\\
+$ (P \wedge  Q) \rightarrow R \hspace{3mm} (\equiv RHS)$ \hspace{5mm} (Implication Law)
+\item %B
+$P \wedge (Q \vee R) \equiv (P \wedge Q) \vee (P \wedge R)$ \\
+LHS: \\
+$(P \wedge Q) \vee (P \wedge R)$ \hspace{15mm}(Distributive Law)
+\item %C
+$\lnot [\lnot [(P\vee Q) \wedge R] \vee \lnot Q]  \equiv Q \wedge R$ \\
+LHS: \\
+$[(P \vee Q) \wedge R] \wedge Q $ \hspace{15mm} (De Morgan's Law) \\
+$(P \vee Q) \wedge (R \wedge Q) $ \hspace{14mm} (Associative Law) \\
+$(P \vee Q) \wedge (Q \wedge R) $ \hspace{14mm} (Commutative Law) \\
+$[(P \vee Q) \wedge Q] \wedge R $ \hspace{15mm} (Associative Law) \\
+$(Q \wedge R) \hspace{5mm} (\equiv RHS)$ \hspace{11mm} (Absorption Law) \\
+\item %D
+$ (P\vee Q\vee R) \wedge (P \vee T\vee \lnot Q) \wedge (P \vee \lnot T \vee R) \equiv P \vee [R \wedge (T \vee \lnot Q)]$ \\
+RHS: \\
+$P \vee (R \wedge T)$ \hspace{41mm} (Domination Law) \\
+$(P \vee R) $ \hspace{48mm} (Identity Law) \\
+LHS: \\
+$ (P\vee Q\vee R) \wedge (P \vee T\vee \lnot Q) \wedge (P \vee \lnot T \vee R $ \\
+$ (P\vee Q\vee R) \wedge T \wedge (P \vee \lnot T \vee R) $ \hspace{10mm} (Domination Law) \\
+$ (P\vee Q\vee R) \wedge T \wedge (P \vee R) $ \hspace{19mm} (Identity Law) \\
+$ (P\vee Q\vee R) \wedge (P \vee R) $ \hspace{25mm} (Identity Law) \\
+$ (P\vee R\vee Q) \wedge T \wedge (P \vee R) $ \hspace{19mm} (Commutative Law) \\
+$ (P \vee R) \hspace{5mm}(\equiv RHS) $ \hspace{28mm} (Absorption Law) \\
+
+\end{enumerate}
+
+\section{Question 12}
+Collaborated with: Hajira Zaman (21100057) 
+\begin{enumerate}
+\item %A
+Truth value: False \\
+Counter-example: When we take x=2 and y=-2 (both of which fall in the UoD) or any other pair of positive and negative integer that give the same result when their moduli are taken, our implication reduced to its simplest form is T $\rightarrow$ F which gives the result False. For all other combinations of integers the statement stands true.
+\item %B
+Truth value: False \\
+Counter-example: For the statement to be true all values of x must have at least one integer y that satisfies the equation but there are several values of x such as 3, which do not give integer value cube roots hence don't have a single y from within the UoD that satisfy the statement. 
+\item %C
+Truth value: False \\
+Counter-example: Once again there are x values that do not produce integer value outputs (y) when put in the equation such as x=2 gives y=0.5 which is not a value that falls in the UoD. So the statement's claim that ALL x have at least one y that satisfies the equation is false.
+\item %D
+Truth value: True
+\item %E
+Truth value: False \\
+Counter-example: This statement is false for all values of x except x=1 which is the form the equation takes when we divide both sides by y. For instance, when x=2, the equation will yield 2=1 which is false.
+\item %F
+Truth value: False \\
+Counter-example: The inequality shown in the statement becomes true when x =1 and y=1, proving that there does exist an x and a y for which the statement becomes false.
+\end{enumerate}
+
+\section{Question 13}
+Collaborated with: Hajira Zaman (21100057) 
+\begin{enumerate}
+\item %A
+$\lnot \forall x \forall y  P(x,y)$ \\
+$  \exists x \lnot \forall y  P(x,y)$ \\
+$ \exists x \exists y \lnot P(x,y)$
+\item %B
+$\lnot \forall x \exists y ( P(x,y) \vee Q(x,y))$ \\
+$  \exists x \lnot \exists y ( P(x,y) \vee Q(x,y))$ \\
+$ \exists x \forall y \lnot ( P(x,y) \vee Q(x,y))$ \\
+$ \exists x \forall y (\lnot P(x,y) \wedge \lnot Q(x,y))$ 
+\item %C
+$\lnot \forall x ( \forall y P(x,y) \wedge  \exists y Q(x,y))$ \\
+$\exists x \lnot ( \forall y P(x,y) \wedge  \exists y Q(x,y))$ \\
+$\exists x (\lnot \forall y P(x,y) \vee \lnot \exists y Q(x,y))$ \\
+$\exists x (\exists y \lnot P(x,y) \vee \forall y \lnot Q(x,y))$
+\item %D
+$\lnot (\exists x  \exists y  \lnot P(x,y) \wedge \forall x  \forall y Q(x,y))$ \\
+$\lnot \exists x  \exists y  \lnot P(x,y) \vee \lnot \forall x  \forall y Q(x,y)$ \\
+$\forall x \lnot \exists y  \lnot P(x,y) \vee \exists x \lnot \forall y Q(x,y)$ \\
+$\forall x \forall y \lnot (\lnot P(x,y)) \vee \exists x \exists y \lnot Q(x,y)$ \\
+$\forall x \forall y P(x,y) \vee \exists x \exists y \lnot Q(x,y)$
+
+\end{enumerate}
+
+\end{document}
