@@ -1,0 +1,174 @@
+
+\documentclass{article}
+\usepackage{graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,hyperref}
+\usepackage[margin=1in]{geometry}
+\newtheorem{theorem}{Theorem}
+
+
+%----------------------- Student and Homework Information --------------------------
+
+%%% PLEASE FILL THIS OUT WITH YOUR INFORMATION
+\newcommand{\myname}{Anusheh Zohair Mustafeez}
+\newcommand{\myid}{21100072}
+\newcommand{\hwNo}{Homework 2}
+%%% END
+
+
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\sffamily\bfseries\large LUMS}
+\fancyhead[LO,RE]{\sffamily\bfseries\large CS-210 Discrete Mathematics}
+\fancyfoot[LO,RE]{\sffamily\bfseries\large \myname: \myid @lums.edu.pk}
+\fancyfoot[RO,LE]{\sffamily\bfseries\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%--------------------- This is the title of the document. DO NOT CHANGE IT ------------------------
+
+\title{CS-210 \hwNo}
+\author{\myname \qquad Student ID: \myid}
+
+%--------------------------------- AFTER Entering the Student and Homework Information, write your answers below ----------------------------------
+
+\begin{document}
+\maketitle
+\section{Problem 2}
+Collaborated with: None \\
+Proving: $$\overline{(A \cap B)\cup (\overline{A}\cap C)} = (A \cap \overline{B})\cup (\overline{A} \cap \overline{C})$$ 
+\begin{table}[h]
+\begin{tabular}{lclclclclclclc|c|c|c|c|c|c|}
+\hline
+&A & B & C & $\overline{A}$&$\overline{B}$ & $\overline{C}$ & $A \cap B$ &$\overline{A} \cap C$ & $(A \cap B) \cup (\overline{A} \cap C)$ & LHS & $A \cap \overline{B}$ & $\overline{A} \cap \overline{C} $ & RHS\\ %RHS=$(A \cap \overline{B}) \cup (\overline{A} \cap \overline{C}) $ \\ LHS =$\overline {(A \cap B )\cup (\overline{A} \cap C})$
+\hline
+&1 & 1 & 1 & 0 & 0 & 0& 1 &\hspace{3mm}0 &1& \hspace{2mm}0& 0&\hspace{4mm}0&0 \\ 
+\hline
+&1 & 1 & 0 & 0 & 0 & 1 & 1 &\hspace{3mm}0 &1&\hspace{2mm}0&0&\hspace{4mm}0&0\\ 
+\hline
+&1 & 0 & 1 & 0 & 1 & 0 & 0 &\hspace{2mm} 0 &0&\hspace{2mm}1&1&\hspace{4mm}0&1\\ 
+\hline
+&1 & 0 & 0 & 0 & 1 &1 &0 &\hspace{2mm} 0&0&\hspace{2mm}1&1&\hspace{4mm}0&1 \\ 
+\hline
+&0 & 1 & 1 & 1 & 0 &0 & 0 &\hspace{3mm}1 &1&\hspace{2mm}0&0&\hspace{4mm}0&0\\ 
+\hline
+&0 & 1 & 0 & 1 & 0 & 1& 0 & \hspace{3mm}0 &0&\hspace{2mm}1&0&\hspace{4mm}1&1\\ 
+\hline
+&0& 0 &1 & 1 & 1 & 0 &0 & \hspace{3mm}1 &1&\hspace{2mm}0&0&\hspace{4mm}0&0 \\ 
+\hline
+&0& 0 & 0 & 1 &1& 1 &0 & \hspace{3mm}0&0&\hspace{2mm}1&0&\hspace{4mm}1&1
+\end{tabular}
+\end{table}
+
+\section{Problem 3}
+Collaborated with: None
+$(A\setminus C) \cup (B\setminus C) = (A\cup B) \setminus C$\\ 
+Proving: $((A\setminus C) \cup (B\setminus C)) \subseteq ((A\cup B) \setminus C)$\\ 
+$x \in ((A\setminus C) \cup (B\setminus C))$\\
+$x \in (A \setminus C) \hspace{34mm} x\in(B \setminus C)$\\
+$x \in A \wedge x \notin C \hspace{30mm} x \in B \wedge x \notin C $\\
+$x \in A \wedge x \in \overline{C} \hspace{30mm} x \in B \wedge x \in \overline{C} $\\
+$(x \in A \wedge x \in \overline{C}) \vee (x \in B \wedge x \in \overline{C}) $\\
+$(x \in A \vee x \in B) \wedge (x \in \overline{C}) $\\
+$(A \cup B) \cap (\overline{C}) $\\
+$(A\cup B) \setminus C$\\
+Proving: 
+$((A\cup B) \setminus C) \subseteq ((A\setminus C) \cup (B\setminus C))$\\
+$x \in (A \cup B) \setminus C$\\
+$x \in (A \cup B) \wedge x\notin C$\\
+$x \in (A \cup B) \wedge x\in \overline{C}$\\
+$(x \in A \vee x \in B) \wedge x\in \overline{C}$\\
+$(x \in A \wedge x \in \overline{C}) \vee (x \in B \wedge x \in \overline{C})$\\
+$(A \cap \overline{C}) \cup (B \cap \overline{C})$\\
+$(A \setminus C) \cup (B \setminus C)$\\
+
+\section{Problem 7}
+Collaborated with: None
+$$\overline{\overline{(A \cup B) \cap C} \cup \overline{B}} = B \cap C$$
+\hspace{53mm}LHS: 
+$$\overline{\overline{(A \cup B)}\cup \overline{C} \cup \overline{B}} \hspace{5mm} (De Morgan's Law)$$ 
+$$\overline{(\overline{A} \cap \overline{B}) \cup \overline{C} \cup \overline{B}} \hspace{5mm} (De Morgan's Law) $$
+$$(A \cup B) \cap C \cap B \hspace{5mm} (De Morgan's Law) $$
+$$(A \cup B) \cap B \cap C \hspace{5mm} (Commutative Law) $$
+$$B \cap C (\equiv RHS)\hspace{5mm} (Absorption Law) $$
+
+
+\section{Problem 8}
+Collaborated with: None
+\begin{enumerate}
+\item %A
+To prove equality of two sets both the sets need to be subsets of each other meaning an element in the first set must be in the second and vice versa. To prove this, let's suppose X is any set that is an element of $\mathcal{P}(A \cap B)$: \\
+$  X \in \mathcal{P}(A \cap B)   $\\
+Since all elements of X are in A and B :\\
+$ X \subseteq (A \cap B)    $\\
+$ (X \subseteq A) \wedge (X \subseteq B)    $\\
+Hence X will also be a subset of the power sets of both A and B: \\
+$    (X \in \mathcal{P}(A)) \wedge  (X \in \mathcal{P}(B)) $\\
+$   X \in (\mathcal{P}(A) \cap \mathcal{P}(B))  $\\
+Since arbitrary set X is in both the LHS and RHS, equality is proved. \\
+\item %B
+In order for RHS and LHS to be equal, they must be subsets of each other. To this end:\\
+Proving: $(\mathcal{P}(A) \cup \mathcal{P}(B)) \subseteq \mathcal{P}(A \cup B)$\\
+Suppose C is any set in : $(\mathcal{P}(A) \cup \mathcal{P}(B)$
+$$ C \in (\mathcal{P}(A) \cup \mathcal{P}(B))$$
+$$C \in \mathcal{P}(A) \vee C \in \mathcal{P}(B)$$
+$$ (C \subseteq A) \vee (C \subseteq B) $$
+$$ C \subseteq A\hspace{20mm} C \subseteq B $$ 
+$$ C \subseteq (A \cup B) \hspace{20mm} C \subseteq (A \cup B) $$
+$$ C \in \mathcal{P}(A \cup B) \hspace{20mm} C \in \mathcal{P}(A \cup B) $$
+$$C \in \mathcal{P}(A \cup B)$$
+Hence proved: $$ (\mathcal{P}(A) \cup \mathcal{P}(B)) \subseteq \mathcal{P}(A \cup B)$$
+
+Next we either need to prove or disprove : $ \mathcal{P}(A \cup B) \subseteq (\mathcal{P}(A) \cup \mathcal{P}(B))  $ \\ \\
+Taking an example to check if it disproves the above statement as a single counterexample can disprove a statement:\\
+Let's assume:\\
+A= \{ 1, 2\} \\
+B=\{2,3\}  \\
+So: \\
+$A \cup B=\{  1, 2,3  \}$  \\
+$\mathcal{P}(A)=\{  \emptyset , 1,2,\{ 1,2 \}  \}$\\
+$\mathcal{P}(B)=\{  \emptyset , 2,3,\{ 2,3 \}  \}$  \\
+$\mathcal{P}(A \cup B)=\{  \emptyset, 1, 2,3, \{ 1,2\} ,\{1,3\},\{ 2,3 \},\{ 1,2,3 \}  \}$  \\
+$\mathcal{P}(A) \cup \mathcal{P}(B)=\{  \emptyset ,1, 2,3,\{1,2\},\{ 2,3 \}  \}$  \\
+The results clearly show that $\mathcal{P}(A \cup B)$ has a bigger cardinality than $\mathcal{P}(A) \cup \mathcal{P}(B)$ so it cannot be fully contained in $\mathcal{P}(A) \cup \mathcal{P}(B)$\\ Hence: \\
+$ \mathcal{P}(A \cup B) \nsubseteq (\mathcal{P}(A) \cup \mathcal{P}(B))  $ \\
+So LHS of the equation is not equal to the RHS.
+\end{enumerate}
+
+\section{Problem 9}
+Collaboprated with: None \\
+$A = \mathcal{P}(\mathcal{P}(\emptyset))$\\
+$A = \mathcal{P}(\{ \emptyset \})$\\
+$A = \{ \emptyset , \{ \emptyset \} \}$\\
+$B = \{ \emptyset , \{ \emptyset \} ,\{ \{ \emptyset \}\}, \{\emptyset,\{ \emptyset \}\} \}$\\
+$C = \{ \emptyset , \{ \emptyset \} ,\{ \{ \emptyset \}\}, \{ \{\{ \emptyset \}\}\},\{\{\emptyset,\{ \emptyset \}\}\} , \{ \emptyset ,\{ \emptyset \}\} ,\{ \emptyset ,\{\{ \emptyset \}\}\} , \{ \emptyset ,\{ \emptyset, \{\emptyset \}\}\} , \{ \{ \emptyset\}, \{\{\emptyset\}\}\} ,\{ \{ \emptyset\}, \{\emptyset,\{\emptyset\}\}\} , \{ \{\{ \emptyset\}\}, \{\emptyset,\{\emptyset\}\}\}, \\ \{ \emptyset, \{\emptyset \},\{\{\emptyset \}\}\} , \{ \emptyset, \{\emptyset \},\{\{\emptyset \}\}, \{\emptyset , \{\emptyset\}\}\} , \{ \{\emptyset \},\{\{\emptyset \}\}, \{\emptyset , \{\emptyset\}\}\} , \{ \emptyset, \{\emptyset \}, \{\emptyset , \{\emptyset\}\}\} ,\{ \emptyset, \{\{\emptyset \}\}, \{\emptyset , \{\emptyset\}\}\} \}$\\
+
+\section{Problem 10}
+Collaborated with: None \\ \\
+We consider A and B to be sets containing sets and $\overline{X}$ and $\overline{Y}$ to be sets. \\
+\begin{enumerate}
+\item %A
+$A = \mathcal{P}(\overline{X}\cup \overline{Y})$ and $B = \mathcal{P}(\overline{X})\cup \mathcal{P}(\overline{Y})$ \\
+We know that $\overline{X} \subset (\overline{X} \cup \overline{Y})$ and similarly $\overline{Y} \subset (\overline{X} \cup \overline{Y}) $ \\
+So $ \mathcal{P}(\overline{X}) \subseteq \mathcal{P}(\overline{X} \cup \overline{Y})$ and $\mathcal{P}(\overline{Y}) \subseteq \mathcal{P}(\overline{X} \cup \overline{Y}))$ \\
+Hence $(\mathcal{P}(\overline{X})\cup \mathcal{P}(\overline{Y})) \subseteq (\mathcal{P}(\overline{X}\cup \overline{Y}))$ \\
+Proved: B $\subseteq$ A
+\item %B
+To prove equality of two sets both the sets need to be subsets of each other meaning an element in the first set must be in the second and vice versa. To prove this, let's suppose C is any set that is an element of A: \\
+$ C \in A  $\\
+$  C \in \mathcal{P}(\overline{X} \cap \overline{Y})   $\\
+Since all elements of C are in $\overline{X}$ and $\overline{Y}$ :\\
+$ C \subseteq (\overline{X} \cap \overline{Y})    $\\
+$ (C \subseteq \overline{X}) \wedge (C \subseteq \overline{Y})    $\\
+Hence C will also be a subset of the power sets of both $\overline{X}$ and $\overline{Y}$: \\
+$    (C \in \mathcal{P}(\overline{X})) \wedge  (C \in \mathcal{P}(\overline{Y})) $\\
+$   C \in (\mathcal{P}(\overline{X}) \cap \mathcal{P}(\overline{Y}))  $\\
+$  C \in B   $ \\
+Hence A = B (Proved)\\ 
+
+
+
+\end{enumerate}
+
+\end{document}
+
