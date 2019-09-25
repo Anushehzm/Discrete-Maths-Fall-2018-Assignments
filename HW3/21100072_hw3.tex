@@ -1,0 +1,195 @@
+\documentclass{article}
+\usepackage{graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,hyperref}
+\usepackage[margin=1in]{geometry}
+\newtheorem{theorem}{Theorem}
+
+
+%----------------------- Student and Homework Information --------------------------
+
+%%% PLEASE FILL THIS OUT WITH YOUR INFORMATION
+\newcommand{\myname}{Anusheh Zohair Mustafeez}
+\newcommand{\myid}{21100072}
+\newcommand{\hwNo}{Homework 3}
+%%% END
+
+
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\sffamily\bfseries\large LUMS}
+\fancyhead[LO,RE]{\sffamily\bfseries\large CS-210 Discrete Mathematics}
+\fancyfoot[LO,RE]{\sffamily\bfseries\large \myname: \myid @lums.edu.pk}
+\fancyfoot[RO,LE]{\sffamily\bfseries\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%--------------------- This is the title of the document. DO NOT CHANGE IT ------------------------
+
+\title{CS-210 \hwNo}
+\author{\myname \qquad Student ID: \myid}
+
+%--------------------------------- AFTER Entering the Student and Homework Information, write your answers below ----------------------------------
+
+\begin{document}
+\maketitle
+
+\section{Problem 2}
+Collaborated with: Hajira Zaman (21100057)
+\begin{enumerate}
+\item %A
+Suppose $\forall x : x \in $A\\
+And since A $\subseteq$ C $\rightarrow$ x $\in$ C \\
+Also suppose $\forall y : y \in $B\\
+And since B $\subseteq$ D $\rightarrow$ y $\in$ D \\
+So $\forall$ x,y : A x B $\subseteq$ C x D \\
+Had A $\nsubseteq$ C or B $\nsubseteq$ D then x $\notin$ C or y $\notin$ D \\
+So then A x B $\nsubseteq$ C x D\\
+This proves that A x B $\subseteq$ C x D $\leftrightarrow$ A $\subseteq$ C and B $\subseteq$ D\\
+
+\item %B
+If A or B or both are $\emptyset$ while C and D are non empty sets, then results of (a) remain true as ($\emptyset$ x B) or (A x $\emptyset$) or ($\emptyset$ x $\emptyset$) are all equal to $\emptyset$ and $\emptyset$ $\subseteq$ (C x D) is true as $\emptyset$ is a subset of all sets.\\ \\
+However, if C or D or both are $\emptyset$ while A and B are non empty sets, then the results of (a) no longer stand true as ($\emptyset$ x D) or (C x $\emptyset$) or ($\emptyset$ x $\emptyset$) are all equal to $\emptyset$ and (A x B) $\nsubseteq$ $\emptyset$ \\ \\
+Yet, if one or both sets on either side of the $\subseteq$ are $\emptyset$ in that case our final expression will be $\emptyset \subseteq \emptyset$ in which case the statement in (a) once again stands true.
+
+\end{enumerate}
+
+\section{Problem 4}
+Collaborated with: Hajira Zaman (21100057)\\\\
+The definition of a function is that f : X $\rightarrow$ Y is a subset of X x Y , such that for every x $\in$ X, f contains exactly one ordered pair with first component x. This means a function f maps each element of X to exactly one element of Y. Using this definition:
+\begin{enumerate}
+\item %A
+$f(n) = \pm n$ is not a function as for each integer value given as input (n), there are two images or outputs. For instance, if$ n$= 1 then $f(n)$ is both -1 and +1 while a relation is only a function if each input value has a single output.
+
+\item %B
+$f(n) = \sqrt{(n^2 + 1)}$ is a function as for any given integer value, each input will have single real output. So if we plot its graph, the vertical line will not intersect the graph more than once which is a property of a function. 
+
+
+\item %C
+$f(n) =\frac{1}{n^2 - 4}$ is not a function as at $n$ = 2 or$n$ = -2 $f(n)$ is undefined due to its denominator going to zero. Hence there will a discontinuity in the relation at these points so it doesn't stand true at this point.
+
+\end{enumerate}
+
+\section{Problem 6}
+Collaborated with: Hajira Zaman (21100057) \\ \\
+Since both f and g are invertible, they are bijective functions i.e both onto and one to one. Such functions have inverses that are also invertible and that map functions from the codomain to domain of the original functions. In other words: \\
+f: Y $\rightarrow$ Z then f$^{-1}$ : Z $\rightarrow$ Y \\
+And g: X $\rightarrow$ Y then g$^{-1}$ : Y $\rightarrow$ X \\
+This means (f $\circ$ f$^{-1}$)(z) = f(f$^{-1}$(z)) = z and (f$^{-1} \circ$ f)(y) = f$^{-1}$(f(y)) = y \\
+And similarly (g $\circ$ g$^{-1}$)(y) = g(g$^{-1}$(y)) = y and (g$^{-1} \circ$ g)(x) = g$^{-1}$(g(x)) = x \\
+The above two lines show that the composition of a function with its inverse gives an image that is equal to the input given to the composition. 
+Since f and g are bijective, this implies that f $\circ$ g is also bijective and maps X $\rightarrow$ Z and has an inverse (f $\circ$ g)$^{-1}$ that maps Z $\rightarrow$ X \\
+We can also deduce that (g$^{-1} \circ$ f $^{-1}$) exists as the range of f$^{-1}$ is a subset of the domain of g$^{-1}$ and this maps Z $\rightarrow$ X \\ 
+Now proving (f $\circ$ g)$^{-1}$ = (g$^{-1} \circ$ f $^{-1}$)\\
+We can do this by showing that the composition of the inverse of either side with the other side will yield an output equal to the input.\\ Mathematically, using the inverse of (f $\circ$ g)$^{-1}$: g$^{-1}$ $\circ$ f$^{-1}$(f $\circ$ g(x)) = x and f $\circ$ g(g$^{-1}\circ$f$^{-1}$(z))=z \\ This would prove equality of functions. \\ To do this let g(x) be y and f(y) be z. \\ So g$^{-1}$ $\circ$ f$^{-1}$(f $\circ$ g(x)) = g$^{-1}$(f$^{-1}$(f(g(x)))) = g$^{-1}$(f$^{-1}$(f(y))) = x \\
+f $\circ$ g(g$^{-1}\circ$f$^{-1}$(z)) = f (g(g$^{-1}$(f$^{-1}(z)$)))= f (g(g$^{-1}$(y))) = f(y) = z (Proved)
+
+\section{Problem 7}
+Collaborated with: Hajira Zaman (21100057)\\\\
+A function is one-to-one when $\forall$ x1, x2 $\in$ X (f (x1) = f (x2) $\rightarrow$ x1 = x2) which means each element of X is mapped to a unique element of Y. \\
+To prove f $\circ$ g is one-to-one we can suppose a$\in$ A, b$\in$ B and c $\in$ C. \\
+So f $\circ$ g(a) = f(g(a)) \\
+Now since g(a) is a one-to-one function it maps a to a unique value of the codomain, b such that f(g(a)) = f(b) \\
+We also know that f(b) is a one-to-one function so it maps b to a a unique value c. \\
+This shows that f $\circ$ g(a) is a function that maps any element a $\in$ A to a unique value c $\in$ C. \\
+Hence according to the definition of a one-to-one function, f$\circ$g is one-to-one.
+
+
+\section{Problem 9}
+Collaborated with: Hajira Zaman (21100057) \\\\
+Definition of one-to-one: A function is one-to-one when $\forall$ x1, x2 $\in$ X (f (x1) = f (x2) $\rightarrow$ x1 = x2) which means each element of X is mapped to a unique element of Y. \\
+Definition of onto: A function is onto when $\forall$ y $\in$ Y $\exists$ x $\in$ X (f (x) = y). In other words, the range on an onto function equals the codomain. \\
+Definition of bijective function (which are invertible functions): A function f : X $\rightarrow$ Y is a bijection if it is both one-to-one and onto. \\
+Using these definitions, we can prove if f(x) is one-to-one, onto and if both, bijective and invertible. \\
+Checking if f(x) is one-to-one or not: \\
+f (x1) = f (x2) $\rightarrow$ 1/(1 + (x1)$^2$)= 1/(1 + (x2)$^2$) $\rightarrow$ x1 = x2 \\
+Hence proved f(x) is one-to-one. \\ Checking if f(x) is onto or not: \\
+y $\in$ range(f) $\leftrightarrow$ y =1/(1 + (x)$^2$) when x $\in$ [0, +$\infty$) \\ $\leftrightarrow$ y in (0,1] \\So range(f) = codomain(f)\\ Hence proved f(x) is onto. \\
+Since f(x) is both one-to-one and onto we can conclude it is also a bijection hence invertible. \\
+
+\section{Problem 12}
+Collaborated with: Hajira Zaman (21100057) \\ \\
+Using the definitions in the previous question we can prove if the function is injective (one-to-one) and/or surjective (onto). \\
+Checking if f(x) is one-to-one or not: \\ 
+For 0 $\leq$ x $\leq$ 2:\\
+f (x1) = f (x2) $\rightarrow$ (x1)$^{3}$= (x2)$^{3}$ $\rightarrow$ x1 = x2 \\
+For 2$<$x$\leq$ 4:\\
+f (x1) = f (x2) $\rightarrow$ x1+6= x2+6 $\rightarrow$ x1 = x2 \\ 
+Hence proved f(x) is one-to-one.\\ \\
+Checking if f(x) is onto or not: \\
+y $\in$ range(f) $\leftrightarrow$ y = x$^{3}$ when x $\in$ [0, 2] \\ 
+$\leftrightarrow$ y in [0,8] \\
+y $\in$ range(f) $\leftrightarrow$ y =x+6 when x $\in$ (2, 4] \\ 
+$\leftrightarrow$ y in (8,10] \\
+So range(f) = codomain(f)\\
+Hence proved f(x) is onto. \\
+
+
+\section{Problem 13}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092) \\
+To disprove anything we need a single counter example while to prove a statement we need it to be true for the whole universal set.
+\begin{enumerate}
+\item %A
+Disproving $\lceil (a+b)\cdot(a-b)\rceil = \lceil (a+b)\rceil\cdot\lceil(a-b)\rceil$ \\
+Taking a =1 and b =0.5 \\
+$\lceil (1+0.5)\cdot(1-0.5)\rceil = \lceil (1+0.5)\rceil\cdot\lceil(1-0.5)\rceil$ \\
+$\lceil (1.5)\cdot(0.5)\rceil = \lceil (1.5)\rceil\cdot\lceil(0.5)\rceil$ \\
+$\lceil0.75\rceil = 2\cdot1$ \\
+1=2 (Contradiction hence disproven)
+\item %B
+Disproving $\lfloor \frac{\left(a-3\right)^2}{2}\rfloor = \lfloor\frac{a^2}{2}\rfloor - 3a + 5$ \\
+Taking a=0.5 \\
+$\lfloor \frac{\left(0.5-3\right)^2}{2}\rfloor = \lfloor\frac{0.5^2}{2}\rfloor - 3(0.5) + 5$ \\
+$\lfloor \frac{\left(-2.5\right)^2}{2}\rfloor = \lfloor\frac{0.25}{2}\rfloor - 1.5 + 5$\\
+$\lfloor \frac{6.25}{2}\rfloor = \lfloor0.125\rfloor + 3.5$\\
+$\lfloor 3.125\rfloor = 0 + 3.5$\\
+3=3.5 (Contradiction hence disproven) \\
+
+\item %C
+Disproving $\lfloor\frac{a-b}{2}\rfloor = \lfloor\frac{a}{2}\rfloor - \lfloor\frac{b}{2}\rfloor$ \\
+Taking a = 6.3 and b = 12.8 \\
+$\lfloor\frac{6.3-12.8}{2}\rfloor = \lfloor\frac{6.3}{2}\rfloor - \lfloor\frac{12.8}{2}\rfloor$ \\
+$\lfloor\frac{-6.5}{2}\rfloor = \lfloor3.15\rfloor - \lfloor6.4\rfloor$ \\
+$\lfloor -3.25\rfloor = 3 - 6$ \\
+-4 =-3 (Contradiction hence disproven)
+
+\end{enumerate}
+
+\section{Problem 14}
+Collaborated with: Hajira Zaman (21100057)
+\begin{enumerate}
+\item %A
+g(A) = \{0,1,3\}
+
+\item %B
+g$^{-1}$(A) does not exist as g(A) is not an invertible function.
+
+\item %C
+No
+
+\item %D
+Yes 
+\item %E
+No
+\end{enumerate}
+
+
+\section{Problem 15}
+Collaborated with: Hajira Zaman (21100057) and Safah Barak (21100092) \\
+\begin{enumerate}
+\item %A
+\{(x,z),(y,y),(z,x)\}
+
+\item %B
+\{(x,x),(y,z),(z,y)\}
+
+\item %C
+\{(x,z),(y,x),(z,y)\}
+
+\item %D
+\{(x,y),(y,x),(z,z)\}
+\end{enumerate}
+
+\end{document}
+
+
